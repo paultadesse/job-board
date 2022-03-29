@@ -18,7 +18,7 @@
 		</div>
 		<div class="space-y-4">
 			@foreach($listings as $listing)
-				<a href="#" class="flex justify-between py-5 px-3 bg-gray-100 {{ $listing->is_highlighted ? 'bg-yellow-100' : '' }}">
+				<a href="{{ route('listings.show', $listing->slug) }}" class="flex justify-between py-5 px-3 bg-gray-100 {{ $listing->is_highlighted ? 'bg-yellow-100' : '' }}">
 						<div class="md:w-16 mr-4 flex flex-col flex-shrink-0">
 							<img src="/storage/{{ $listing->logo }}" alt="{{ $listing->company }}" class="w-16 h-16 rounded-full object-cover">
 						</div>

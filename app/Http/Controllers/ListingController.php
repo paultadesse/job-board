@@ -24,7 +24,7 @@ class ListingController extends Controller
             $listings = $listings->filter(function($listing) use ($query) {
                if(Str::contains(strtolower($listing->title), $query)){
                 return true;
-               }
+               }    
 
                if(Str::contains(strtolower($listing->company), $query)){
                 return true;
@@ -43,5 +43,21 @@ class ListingController extends Controller
         }
 
         return view('listings.index', compact('listings', 'tags'));
+    }
+
+    public function show(Listing $listing, Request $request)
+    {
+        return view('listings.show', compact('listing'));
+    }
+
+    public function apply(Listing $listing, Request $request)
+    {
+        $listing->clicks()
+            ->create([
+                'user_agent'    => $request->userAgent(),
+                'ip'            => $request->ip()
+            ]);
+
+        return redirect()->to($listing->apply_link);
     }
 }

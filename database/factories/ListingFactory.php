@@ -19,7 +19,7 @@ class ListingFactory extends Factory
 
         $content = '';
         for($i=0; $i < 5; $i++) {
-            $content .='<p class="mb-4">' . $this->faker->sentence(rand(5, 10), true) . '</p>';
+            $content .='<p class="mb-4">' . $this->faker->sentences(rand(5, 10), true) . '</p>';
         }
 
         return [

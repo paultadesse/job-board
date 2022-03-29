@@ -1,7 +1,7 @@
 <section>
 	<div class="flex items-center justify-center p-7">
 		<div class="space-y-7">
-			<h1 class="text-center font-bold text-5xl">Top jobs in the industry </h1>
+			<h1 class="text-center font-bold text-5xl">Unemployed ? Not Any More ! </h1>
 			<p class="flex max-w-3xl text-justify text-gray-600">
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
